@@ -74,9 +74,7 @@ class __TwigTemplate_2f7103067ec0a343cc24c6e0f4b013d3f8bbc90be54a88db33f8f30c348
         // line 22
         echo "  <li ";
         $this->displayBlock('active_inicio', $context, $blocks);
-        echo "><a href=\"";
-        echo $this->env->getExtension('routing')->getPath("backend_homepage");
-        echo "\"><span>";
+        echo "><a href=\"#\"><span>";
         echo "Inicio";
         echo "</span></a></li>
   
@@ -90,9 +88,7 @@ class __TwigTemplate_2f7103067ec0a343cc24c6e0f4b013d3f8bbc90be54a88db33f8f30c348
       <li ";
         // line 28
         $this->displayBlock('active_tabla_categoria', $context, $blocks);
-        echo "><a href=\"";
-        echo $this->env->getExtension('routing')->getPath("categoria");
-        echo "\">";
+        echo "><a href=\"#\">";
         echo "Categorías";
         echo "</a></li>      
     </ul>
@@ -109,9 +105,7 @@ class __TwigTemplate_2f7103067ec0a343cc24c6e0f4b013d3f8bbc90be54a88db33f8f30c348
       <li ";
         // line 37
         $this->displayBlock('active_tabla_seg_usuario', $context, $blocks);
-        echo "><a href=\"";
-        echo $this->env->getExtension('routing')->getPath("categoria");
-        echo "\">";
+        echo "><a href=\"#\">";
         echo "Usuarios";
         echo "</a></li>      
     </ul>
@@ -246,6 +240,6 @@ class __TwigTemplate_2f7103067ec0a343cc24c6e0f4b013d3f8bbc90be54a88db33f8f30c348
 
     public function getDebugInfo()
     {
-        return array (  229 => 71,  224 => 69,  219 => 67,  212 => 64,  207 => 59,  202 => 53,  197 => 52,  192 => 49,  187 => 48,  180 => 59,  171 => 53,  167 => 52,  161 => 49,  157 => 48,  152 => 45,  149 => 44,  144 => 37,  139 => 34,  134 => 28,  129 => 25,  124 => 22,  111 => 37,  105 => 34,  92 => 28,  86 => 25,  72 => 21,  66 => 18,  80 => 18,  75 => 22,  69 => 15,  63 => 14,  58 => 13,  52 => 10,  47 => 5,  41 => 3,  36 => 4,);
+        return array (  223 => 71,  218 => 69,  213 => 67,  206 => 64,  201 => 59,  196 => 53,  191 => 52,  186 => 49,  181 => 48,  174 => 59,  165 => 53,  161 => 52,  155 => 49,  151 => 48,  146 => 45,  143 => 44,  138 => 37,  133 => 34,  128 => 28,  123 => 25,  118 => 22,  107 => 37,  101 => 34,  90 => 28,  84 => 25,  72 => 21,  66 => 18,  80 => 18,  75 => 22,  69 => 15,  63 => 14,  58 => 13,  52 => 10,  47 => 5,  41 => 3,  36 => 4,);
     }
 }

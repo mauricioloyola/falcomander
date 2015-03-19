@@ -724,26 +724,20 @@ class appDevDebugProjectContainer extends Container
         $c = new \Doctrine\Common\Cache\ArrayCache();
         $c->setNamespace('sf2orm_default_138a76e2d41f54eb581992db8df95fc8435f31d522944bb0f9ac99ed3cd6578a');
 
-        $d = new \Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver(array('D:\\Proyectos\\lograrme\\frontend\\src\\App\\Bundle\\BackendBundle\\Resources\\config\\doctrine' => 'App\\Bundle\\BackendBundle\\Entity'));
-        $d->setGlobalBasename('mapping');
+        $d = new \Doctrine\ORM\Configuration();
+        $d->setEntityNamespaces(array());
+        $d->setMetadataCacheImpl($a);
+        $d->setQueryCacheImpl($b);
+        $d->setResultCacheImpl($c);
+        $d->setMetadataDriverImpl(new \Doctrine\ORM\Mapping\Driver\DriverChain());
+        $d->setProxyDir('D:/Proyectos/lograrme/frontend/app/cache/dev/doctrine/orm/Proxies');
+        $d->setProxyNamespace('Proxies');
+        $d->setAutoGenerateProxyClasses(true);
+        $d->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
+        $d->setDefaultRepositoryClassName('Doctrine\\ORM\\EntityRepository');
+        $d->setNamingStrategy(new \Doctrine\ORM\Mapping\DefaultNamingStrategy());
 
-        $e = new \Doctrine\ORM\Mapping\Driver\DriverChain();
-        $e->addDriver($d, 'App\\Bundle\\BackendBundle\\Entity');
-
-        $f = new \Doctrine\ORM\Configuration();
-        $f->setEntityNamespaces(array('BackendBundle' => 'App\\Bundle\\BackendBundle\\Entity'));
-        $f->setMetadataCacheImpl($a);
-        $f->setQueryCacheImpl($b);
-        $f->setResultCacheImpl($c);
-        $f->setMetadataDriverImpl($e);
-        $f->setProxyDir('D:/Proyectos/lograrme/frontend/app/cache/dev/doctrine/orm/Proxies');
-        $f->setProxyNamespace('Proxies');
-        $f->setAutoGenerateProxyClasses(true);
-        $f->setClassMetadataFactoryName('Doctrine\\ORM\\Mapping\\ClassMetadataFactory');
-        $f->setDefaultRepositoryClassName('Doctrine\\ORM\\EntityRepository');
-        $f->setNamingStrategy(new \Doctrine\ORM\Mapping\DefaultNamingStrategy());
-
-        $this->services['doctrine.orm.default_entity_manager'] = $instance = \Doctrine\ORM\EntityManager::create($this->get('doctrine.dbal.default_connection'), $f);
+        $this->services['doctrine.orm.default_entity_manager'] = $instance = \Doctrine\ORM\EntityManager::create($this->get('doctrine.dbal.default_connection'), $d);
 
         $this->get('doctrine.orm.default_manager_configurator')->configure($instance);
 
@@ -3038,7 +3032,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addExtension(new \Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension());
         $instance->addExtension(new \Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension());
         $instance->addGlobal('app', $this->get('templating.globals'));
-        $instance->addGlobal('global', array('name_web' => 'Encuentra todo lo que necesitas para lograr tus metas', 'company' => 'TECLOY Tecnología & Servicios E.I.R.L', 'year' => '2015', 'directorio_css' => 'bundles/backend/dist/css/', 'directorio_css_bootstrap' => 'bundles/backend/bootstrap/css/', 'directorio_css_font_awesome' => 'bundles/backend/font-awesome/4.3.0/css/', 'directorio_css_ionicons' => 'bundles/backend/ionicons/2.0.0/css/', 'directorio_js' => 'bundles/backend/dist/js/', 'directorio_js_bootstrap' => 'bundles/backend/bootstrap/js/', 'directorio_plugins' => 'bundles/backend/plugins/', 'directorio_images' => 'bundles/backend/images/', 'directorio_dist_img' => 'bundles/backend/dist/img/', 'idiomas' => array('es' => 'Español', 'en' => 'Inglés', 'it' => 'Italiano'), 'lenguaje' => 'en'));
+        $instance->addGlobal('global', array('name_web' => 'Encuentra todo lo que necesitas para lograr tus metas', 'company' => 'TECLOY Tecnología & Servicios E.I.R.L', 'year' => '2015', 'directorio_css' => 'bundles/app/dist/css/', 'directorio_css_bootstrap' => 'bundles/app/bootstrap/css/', 'directorio_css_font_awesome' => 'bundles/app/font-awesome/4.3.0/css/', 'directorio_css_ionicons' => 'bundles/app/ionicons/2.0.0/css/', 'directorio_js' => 'bundles/app/dist/js/', 'directorio_js_bootstrap' => 'bundles/app/bootstrap/js/', 'directorio_plugins' => 'bundles/app/plugins/', 'directorio_images' => 'bundles/app/images/', 'directorio_dist_img' => 'bundles/app/dist/img/', 'idiomas' => array('es' => 'Español', 'en' => 'Inglés', 'it' => 'Italiano'), 'lenguaje' => 'en'));
 
         return $instance;
     }
@@ -3086,7 +3080,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath('D:\\Proyectos\\lograrme\\frontend\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views', 'Twig');
         $instance->addPath('D:\\Proyectos\\lograrme\\frontend\\vendor\\symfony\\swiftmailer-bundle\\Symfony\\Bundle\\SwiftmailerBundle/Resources/views', 'Swiftmailer');
         $instance->addPath('D:\\Proyectos\\lograrme\\frontend\\vendor\\doctrine\\doctrine-bundle\\Doctrine\\Bundle\\DoctrineBundle/Resources/views', 'Doctrine');
-        $instance->addPath('D:\\Proyectos\\lograrme\\frontend\\src\\App\\Bundle\\BackendBundle/Resources/views', 'Backend');
+        $instance->addPath('D:\\Proyectos\\lograrme\\frontend\\src\\App\\Bundle\\AppBundle/Resources/views', 'App');
         $instance->addPath('D:\\Proyectos\\lograrme\\frontend\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', 'WebProfiler');
         $instance->addPath('D:\\Proyectos\\lograrme\\frontend\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
         $instance->addPath('D:/Proyectos/lograrme/frontend/app/Resources/views');
@@ -3572,7 +3566,7 @@ class appDevDebugProjectContainer extends Container
                 'AsseticBundle' => 'Symfony\\Bundle\\AsseticBundle\\AsseticBundle',
                 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle',
                 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle',
-                'BackendBundle' => 'App\\Bundle\\BackendBundle\\BackendBundle',
+                'AppBundle' => 'App\\Bundle\\AppBundle\\AppBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
                 'SensioGeneratorBundle' => 'Sensio\\Bundle\\GeneratorBundle\\SensioGeneratorBundle',

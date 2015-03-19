@@ -16,7 +16,7 @@
       <parameter key="AsseticBundle">Symfony\Bundle\AsseticBundle\AsseticBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
-      <parameter key="BackendBundle">App\Bundle\BackendBundle\BackendBundle</parameter>
+      <parameter key="AppBundle">App\Bundle\AppBundle\AppBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
@@ -2136,15 +2136,15 @@
           <argument key="name_web">Encuentra todo lo que necesitas para lograr tus metas</argument>
           <argument key="company">TECLOY Tecnología &amp; Servicios E.I.R.L</argument>
           <argument key="year">2015</argument>
-          <argument key="directorio_css">bundles/backend/dist/css/</argument>
-          <argument key="directorio_css_bootstrap">bundles/backend/bootstrap/css/</argument>
-          <argument key="directorio_css_font_awesome">bundles/backend/font-awesome/4.3.0/css/</argument>
-          <argument key="directorio_css_ionicons">bundles/backend/ionicons/2.0.0/css/</argument>
-          <argument key="directorio_js">bundles/backend/dist/js/</argument>
-          <argument key="directorio_js_bootstrap">bundles/backend/bootstrap/js/</argument>
-          <argument key="directorio_plugins">bundles/backend/plugins/</argument>
-          <argument key="directorio_images">bundles/backend/images/</argument>
-          <argument key="directorio_dist_img">bundles/backend/dist/img/</argument>
+          <argument key="directorio_css">bundles/app/dist/css/</argument>
+          <argument key="directorio_css_bootstrap">bundles/app/bootstrap/css/</argument>
+          <argument key="directorio_css_font_awesome">bundles/app/font-awesome/4.3.0/css/</argument>
+          <argument key="directorio_css_ionicons">bundles/app/ionicons/2.0.0/css/</argument>
+          <argument key="directorio_js">bundles/app/dist/js/</argument>
+          <argument key="directorio_js_bootstrap">bundles/app/bootstrap/js/</argument>
+          <argument key="directorio_plugins">bundles/app/plugins/</argument>
+          <argument key="directorio_images">bundles/app/images/</argument>
+          <argument key="directorio_dist_img">bundles/app/dist/img/</argument>
           <argument key="idiomas" type="collection">
             <argument key="es">Español</argument>
             <argument key="en">Inglés</argument>
@@ -2390,9 +2390,7 @@
       <argument type="service">
         <service class="Doctrine\ORM\Configuration" public="false">
           <call method="setEntityNamespaces">
-            <argument type="collection">
-              <argument key="BackendBundle">App\Bundle\BackendBundle\Entity</argument>
-            </argument>
+            <argument type="collection"/>
           </call>
           <call method="setMetadataCacheImpl">
             <argument type="service">
@@ -2423,21 +2421,7 @@
           </call>
           <call method="setMetadataDriverImpl">
             <argument type="service">
-              <service class="Doctrine\ORM\Mapping\Driver\DriverChain" public="false">
-                <call method="addDriver">
-                  <argument type="service">
-                    <service class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
-                      <argument type="collection">
-                        <argument key="D:\Proyectos\lograrme\frontend\src\App\Bundle\BackendBundle\Resources\config\doctrine">App\Bundle\BackendBundle\Entity</argument>
-                      </argument>
-                      <call method="setGlobalBasename">
-                        <argument>mapping</argument>
-                      </call>
-                    </service>
-                  </argument>
-                  <argument>App\Bundle\BackendBundle\Entity</argument>
-                </call>
-              </service>
+              <service class="Doctrine\ORM\Mapping\Driver\DriverChain" public="false"/>
             </argument>
           </call>
           <call method="setProxyDir">
@@ -2818,8 +2802,8 @@
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>D:\Proyectos\lograrme\frontend\src\App\Bundle\BackendBundle/Resources/views</argument>
-        <argument>Backend</argument>
+        <argument>D:\Proyectos\lograrme\frontend\src\App\Bundle\AppBundle/Resources/views</argument>
+        <argument>App</argument>
       </call>
       <call method="addPath">
         <argument>D:\Proyectos\lograrme\frontend\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle/Resources/views</argument>

@@ -135,73 +135,13 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // backend_homepage
+        // app_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'backend_homepage');
+                return $this->redirect($pathinfo.'/', 'app_homepage');
             }
 
-            return array (  '_controller' => 'App\\Bundle\\BackendBundle\\Controller\\DefaultController::indexAction',  '_route' => 'backend_homepage',);
-        }
-
-        if (0 === strpos($pathinfo, '/categoria')) {
-            // categoria
-            if (rtrim($pathinfo, '/') === '/categoria') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'categoria');
-                }
-
-                return array (  '_controller' => 'App\\Bundle\\BackendBundle\\Controller\\CategoriaController::indexAction',  '_route' => 'categoria',);
-            }
-
-            // categoria_show
-            if (preg_match('#^/categoria/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'categoria_show')), array (  '_controller' => 'App\\Bundle\\BackendBundle\\Controller\\CategoriaController::showAction',));
-            }
-
-            // categoria_new
-            if ($pathinfo === '/categoria/new') {
-                return array (  '_controller' => 'App\\Bundle\\BackendBundle\\Controller\\CategoriaController::newAction',  '_route' => 'categoria_new',);
-            }
-
-            // categoria_create
-            if ($pathinfo === '/categoria/create') {
-                if ($this->context->getMethod() != 'POST') {
-                    $allow[] = 'POST';
-                    goto not_categoria_create;
-                }
-
-                return array (  '_controller' => 'App\\Bundle\\BackendBundle\\Controller\\CategoriaController::createAction',  '_route' => 'categoria_create',);
-            }
-            not_categoria_create:
-
-            // categoria_edit
-            if (preg_match('#^/categoria/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'categoria_edit')), array (  '_controller' => 'App\\Bundle\\BackendBundle\\Controller\\CategoriaController::editAction',));
-            }
-
-            // categoria_update
-            if (preg_match('#^/categoria/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
-                    $allow = array_merge($allow, array('POST', 'PUT'));
-                    goto not_categoria_update;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'categoria_update')), array (  '_controller' => 'App\\Bundle\\BackendBundle\\Controller\\CategoriaController::updateAction',));
-            }
-            not_categoria_update:
-
-            // categoria_delete
-            if (preg_match('#^/categoria/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
-                if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
-                    $allow = array_merge($allow, array('POST', 'DELETE'));
-                    goto not_categoria_delete;
-                }
-
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'categoria_delete')), array (  '_controller' => 'App\\Bundle\\BackendBundle\\Controller\\CategoriaController::deleteAction',));
-            }
-            not_categoria_delete:
-
+            return array (  '_controller' => 'App\\Bundle\\AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'app_homepage',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

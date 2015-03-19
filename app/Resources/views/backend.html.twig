@@ -19,13 +19,13 @@
 {% endblock %}
 
 {% block menu_opciones %}
-  <li {% block active_inicio %}{% endblock %}><a href="{{ path('backend_homepage') }}"><span>{{'Inicio'}}</span></a></li>
+  <li {% block active_inicio %}{% endblock %}><a href="#"><span>{{'Inicio'}}</span></a></li>
   
   <!-- Tablas Principales -->
   <li {% block active_tabla_principal %}{% endblock %}>
     <a href="#"><span>Tablas Principales</span> <i class="fa fa-angle-left pull-right"></i></a>
     <ul class="treeview-menu">
-      <li {% block active_tabla_categoria %}{% endblock %}><a href="{{ path('categoria') }}">{{'Categorías'}}</a></li>      
+      <li {% block active_tabla_categoria %}{% endblock %}><a href="#">{{'Categorías'}}</a></li>      
     </ul>
   </li>
   <!-- Fin Tablas Principales -->
@@ -34,7 +34,7 @@
   <li {% block active_tabla_seguridad %}{% endblock %}>
     <a href="#"><span>Tablas de Seguridad</span> <i class="fa fa-angle-left pull-right"></i></a>
     <ul class="treeview-menu">
-      <li {% block active_tabla_seg_usuario %}{% endblock %}><a href="{{ path('categoria') }}">{{'Usuarios'}}</a></li>      
+      <li {% block active_tabla_seg_usuario %}{% endblock %}><a href="#">{{'Usuarios'}}</a></li>      
     </ul>
   </li>
   <!-- Fin Tablas Principales -->
