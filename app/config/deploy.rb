@@ -8,8 +8,8 @@ set :use_sudo,      false
 ssh_options[:port] = 22123
 #set :php_bin,    "usr/bin/php" 
 
-set :repository,  "https://mauricioloyola@bitbucket.org/mauricioloyola/frontend.git"
-#set :repository,  "git@bitbucket.org:mauricioloyola/frontend.git"
+#set :repository,  "https://mauricioloyola@bitbucket.org/mauricioloyola/frontend.git"
+set :repository,  "git@bitbucket.org:mauricioloyola/frontend.git"
 
 set :scm,         :git
 set :branch,        "master"
