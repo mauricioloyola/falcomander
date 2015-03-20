@@ -25,6 +25,19 @@ set  :keep_releases,  3
 
 set :deploy_via, :rsync_with_remote_cache
 
+task :upload_parameters do
+  origin_file = "app/config/parameters.yml"
+  destination_file = shared_path + "/app/config/parameters.yml" # Notice the
+  shared_path
+
+  try_sudo "mkdir -p #{File.dirname(destination_file)}"
+  top.upload(origin_file, destination_file)
+end
+
+after "deploy:setup", "upload_parameters"
+
+
+
 set :shared_files,        ["app/config/parameters.yml"]
 set :shared_children,     [app_path + "/logs", web_path + "/uploads", "vendor"]
 
