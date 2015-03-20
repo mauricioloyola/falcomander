@@ -25,6 +25,8 @@ set  :keep_releases,  3
 
 set :deploy_via, :rsync_with_remote_cache
 
+ssh_options[:forward_agent] = true
+
 task :upload_parameters do
   origin_file = "app/config/parameters.yml"
   destination_file = shared_path + "/app/config/parameters.yml" # Notice the
