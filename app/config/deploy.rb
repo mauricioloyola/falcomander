@@ -9,7 +9,7 @@ ssh_options[:port] = 22123
 #set :php_bin,    "usr/bin/php" 
 
 set :repository,  "https://mauricioloyola@bitbucket.org/mauricioloyola/frontend.git"
-#set :repository,  "https://mloyolatirado@bitbucket.org/mloyolatirado/app_frontend.git"
+#set :repository,  "git@bitbucket.org:mauricioloyola/frontend.git"
 
 set :scm,         :git
 set :branch,        "master"
@@ -30,3 +30,4 @@ set  :keep_releases,  3
 
 set :shared_files,        ["app/config/parameters.yml"]
 set :shared_children,     [app_path + "/logs", web_path + "/uploads", "vendor"]
+
