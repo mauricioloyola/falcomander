@@ -4,16 +4,17 @@ set :deploy_to,   "/var/www/vhosts/lograrme.com/symfony_projects/frontend/"
 set :app_path,    "app"
 
 set :user,      "usrlograrme"  
+set :password,    "1064a4m3"
 set :use_sudo,      false
 ssh_options[:port] = 22123
-set :password,    "1064a4m3"
+
 
 set :repository,  "git@bitbucket.org:mauricioloyola/frontend.git"
 set :scm,         :git
 set :branch,        "master"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `subversion`, `mercurial`, `perforce`, or `none`
 
-set :deploy_via, :copy
+#set :deploy_via, :copy
 #set :deploy_via, :remote_cache
 
 #ssh_options[:forward_agent] = true
