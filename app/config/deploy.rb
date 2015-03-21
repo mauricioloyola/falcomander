@@ -10,6 +10,7 @@ role  :web,          domain
 role  :app,          domain, :primary => true
 
 set :user,           "usrlograrme"  
+set :password,       "40262378"  
 ssh_options[:port] = 22123
 set   :use_sudo,      false
 set   :keep_releases, 3
