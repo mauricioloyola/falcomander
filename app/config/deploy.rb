@@ -7,7 +7,8 @@ set :user,          "usrlograrme"
 set :use_sudo,      false
 ssh_options[:port] = 22123
 
-set :repository,    "git@bitbucket.org:mauricioloyola/frontend.git"
+set :repository,    "https://github.com/mauricioloyola/lograrme_frontend"
+#set :repository,    "git@bitbucket.org:mauricioloyola/frontend.git"
 set :scm,           :git
 set :branch,        "master"
 
