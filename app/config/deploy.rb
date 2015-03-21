@@ -1,6 +1,6 @@
 set :application, "Web frontend lograrme.com"
 set :domain,      "69.195.198.111"
-set :deploy_to,   "/var/www/vhosts/lograrme.com/symfony_projects/"
+set :deploy_to,   "/var/www/vhosts/lograrme.com/symfony_projects/frontend/"
 set :app_path,    "app"
 
 set :user,      "usrlograrme"  
@@ -24,7 +24,7 @@ role :app,        domain
 role :db,         domain, :primary => true       # This may be the same as your `Web` server
 
 set :use_sudo, false
-set :keep_releases,  3
+set :keep_releases,  2
 set :shared_files,        ["app/config/parameters.yml"]
 set :shared_children,     [app_path + "/logs", web_path + "/uploads", "vendor"]
 set :php_bin,             "/usr/bin/php"
