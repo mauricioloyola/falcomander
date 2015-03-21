@@ -28,6 +28,7 @@ set :keep_releases,  2
 set :shared_files,        ["app/config/parameters.yml"]
 set :shared_children,     [app_path + "/logs", web_path + "/uploads", "vendor"]
 set :php_bin,             "/usr/bin/php"
+set :use_composer, true
 set :update_vendors, true
 set :dump_assetic_assets, true
 default_run_options[:pty] = true
