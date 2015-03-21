@@ -14,7 +14,7 @@ ssh_options[:port] = 22123
 set   :use_sudo,      false
 set   :keep_releases, 3
 
-set :deploy_via, :rsync_with_remote_cache
+#set :deploy_via, :rsync_with_remote_cache
 set :shared_files,      ["app/config/parameters.yml"]
 set :shared_children,     [app_path + "/logs", web_path + "/uploads", "vendor"]
 
