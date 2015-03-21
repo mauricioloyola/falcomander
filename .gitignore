@@ -1,4 +1,5 @@
 /web/bundles/
+!app/bundles/app
 /app/cache/*
 /app/config/parameters.yml
 /app/config/deploy.rb
@@ -6,6 +7,5 @@
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 /build/
-/vendor/
 /bin/
 /composer.phar
