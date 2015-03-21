@@ -1,6 +1,6 @@
 set :application,   "Web frontend lograrme.com"
 set :domain,        "69.195.198.111"
-set :deploy_to,     "/var/www/vhosts/lograrme.com/symfony_projects/frontend/"
+set :deploy_to,     "/var/www/vhosts/lograrme.com/symfony_projects/"
 set :app_path,      "app"
 
 set :user,          "usrlograrme"  

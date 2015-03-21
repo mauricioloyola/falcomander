@@ -38,3 +38,7 @@
 # Composer PHAR
 /composer.phar
 >>>>>>> 3453b0c79754ff94fd44abcc55b42490dfffe8b0
+
+# Capifony
+/app/config/deploy.rb
+Capfile
