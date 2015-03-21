@@ -10,12 +10,12 @@ ssh_options[:port] = 22123
 set :repository,  "git@bitbucket.org:mauricioloyola/frontend.git"
 set :scm,         :git
 # Agregado por mauricio
-set :scm_verbose, true
+#set :scm_verbose, true
 set :branch,        "master"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `subversion`, `mercurial`, `perforce`, or `none`
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
 
-ssh_options[:forward_agent] = true
+#ssh_options[:forward_agent] = true
 
 set :model_manager, "doctrine"
 
@@ -32,4 +32,3 @@ set :use_composer, true
 set :update_vendors, true
 set :dump_assetic_assets, true
 default_run_options[:pty] = true
-
