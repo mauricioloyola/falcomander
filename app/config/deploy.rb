@@ -19,7 +19,7 @@ role :app,        domain
 role :db,         domain, :primary => true       # This may be the same as your `Web` server
 
 set :use_composer, true
-set :update_vendors, true
+#set :update_vendors, true
 
 set  :keep_releases,  3
 
