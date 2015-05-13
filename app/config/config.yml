@@ -30,14 +30,14 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
       global:        
-        name_web: 'Encuentra todo lo que necesitas para lograr tus metas'
+        name_web: 'Control de Plaga Aviar'
         company: 'TECLOY Tecnología & Servicios E.I.R.L'
         year: '2015'
-        directorio_css: 'bundles/app/dist/css/'
+        directorio_css: 'bundles/app/css/'
         directorio_css_bootstrap: 'bundles/app/bootstrap/css/'
         directorio_css_font_awesome: 'bundles/app/font-awesome/4.3.0/css/'
         directorio_css_ionicons: 'bundles/app/ionicons/2.0.0/css/'
-        directorio_js:  'bundles/app/dist/js/' 
+        directorio_js:  'bundles/app/js/' 
         directorio_js_bootstrap:  'bundles/app/bootstrap/js/' 
         directorio_plugins:  'bundles/app/plugins/' 
         directorio_images: 'bundles/app/images/' 

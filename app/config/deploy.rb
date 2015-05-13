@@ -1,14 +1,13 @@
-set :application,   "Web frontend lograrme.com"
+set :application,   "Web frontend falcomander.com"
 set :domain,        "69.195.198.111"
-set :deploy_to,     "/var/www/vhosts/lograrme.com/symfony_projects/"
+set :deploy_to,     "/var/www/vhosts/falcomandercontrol.com/symfony_projects/"
 set :app_path,      "app"
 
-set :user,          "usrlograrme"  
+set :user,          "falcomander"  
 set :use_sudo,      false
 ssh_options[:port] = 22123
 
-set :repository,    "https://github.com/mauricioloyola/lograrme_frontend.git"
-#set :repository,    "git@bitbucket.org:mauricioloyola/frontend.git"
+set :repository,    "https://github.com/mauricioloyola/falcomander.git"
 set :scm,           :git
 set :branch,        "master"
 
