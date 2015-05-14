@@ -80,7 +80,34 @@
     </div> <!-- /.container -->
   </div> <!-- /#product-promotion -->  
 
+  <div id="contact" class="content-section">
+    <div class="container">
+      {% block contacto %}{% endblock %}          
+    </div>         
+  </div>         
+    
 {% endblock %}        
+
+{% block footer %}
+  <div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <span>Copyright &copy; 2015 <a href="#">{{"Falcomander Control S.R.L"}}</a> <a rel="nofollow" href="http://www.falcomandercontrol.com"></a></span>
+                </div> <!-- /.col-md-6 -->
+                <div class="col-md-6 col-sm-6">
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com/controlplagaaviar" target="_blank" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                        <li><a href="#" class="fa fa-rss"></a></li>
+                    </ul>
+                </div> <!-- /.col-md-6 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /.site-footer -->
+{% endblock %}
 
 {% block javascripts %}  
   <script src="{{ asset(global.directorio_js ~ "vendor/jquery-1.10.1.min.js")}}"></script>

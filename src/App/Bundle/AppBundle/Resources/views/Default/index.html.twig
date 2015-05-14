@@ -162,6 +162,10 @@
             <p>
             	<b>{{"Video:"}}</b>	{{"RED SALUD UC. Palomas y sus peligrosas enfermedades"}}.<br>
             	<iframe width="420" height="315" src="https://www.youtube.com/embed/hHPvyHRrMjo" frameborder="0" allowfullscreen></iframe>
+            </p>
+            <p>
+              <b>{{"Video:"}} {{"¿Tus hijos regresan del colegio con salpullido, ronchas, picazón, alergias, afecciones respiratorias y desconoces los motivos?. Ten mucho cuidado, es probable que estén siendo infectados por hongos y enfermedades que transmiten las palomas"}}.</b> <br>
+              <iframe width="420" height="315" src="https://www.youtube.com/embed/VdXrZ5wgHME" frameborder="0" allowfullscreen></iframe>
             </p>            
             <p>
             	{{"En"}} <b>{{"FALCOMANDER CONTROL"}}</b> {{"tenemos la experiencia y las mejores técnicas para el control de plagas aviar (palomas) en industrias, almacenes, oficinas, locales comerciales, hospitales, universidades, aeropuertos, residencias, edificios, zonas rurales, etc"}}.
@@ -187,6 +191,11 @@
       <div class="item-small">        
         <img src="{{ asset(global.directorio_images ~ "promotion/promotion6.jpg")}}" alt="Heces de palomas provocaron muerte de un anciano en La Perla">   
         <a href="http://elcomercio.pe/lima/sucesos/heces-palomas-provocaron-muerte-anciano-perla-noticia-1259303" target="_blank"><h4>{{"Noticia: Heces de palomas provocaron muerte de un anciano en La Perla"}}.</h4></a>
+      </div> <!-- /.item-small -->
+      <br>
+      <div class="item-small">        
+        <img src="{{ asset(global.directorio_images ~ "promotion/supermercado.jpg")}}" alt="Palomas contaminan productos en supermercados y centros comerciales">   
+        <a href="https://youtu.be/6-faifWfdxg?t=7s" target="_blank"><h4>{{"Video: Palomas contaminan productos en supermercados y centros comerciales"}}.</h4></a>
       </div> <!-- /.item-small -->
       <br>
       <div class="item-small">        
@@ -235,5 +244,44 @@
     </div> <!-- /.col-md-3 -->  
   </div> <!-- /.row -->
 {% endblock %}
+
+{% block contacto %}
+<div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="section-title">{{"Contacto"}}</h1>
+                </div> <!-- /.col-md-12 -->
+            </div> <!-- /.row -->
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 text-center bigger-text">
+                    <p>{{" Cuida tu salud, la de tu familia, trabajadores y clientes evitando enfermedades transmitidas por las palomas"}}.</p>
+                    <p>
+                      <b>{{"Email:"}}</b> <a href="mailto:info@falcomandercontrol.com">{{"info@falcomandercontrol.com"}}</a><br>
+                      <b>{{"Teléfono:"}}</b> {{"675-5090 / 977524410"}}
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    
+                </div> <!-- /.col-md-6 -->
+                <div class="col-md-6 col-sm-6">
+                    <div class="row contact-form">
+                        <fieldset class="col-md-6 col-sm-6">
+                            <input id="name" type="text" name="name" placeholder="Nombre y Apellidos">
+                        </fieldset>
+                        <fieldset class="col-md-6 col-sm-6">
+                            <input type="email" name="email" id="email" placeholder="Email">
+                        </fieldset>
+                        <fieldset class="col-md-12">
+                            <input type="text" name="subject" id="subject" placeholder="Titulo">
+                        </fieldset>
+                        <fieldset class="col-md-12">
+                            <textarea name="comments" id="comments" placeholder="Mensaje"></textarea>
+                        </fieldset>
+                        <fieldset class="col-md-12">
+                            <input type="submit" name="send" value="Enviar Mensaje" id="submit" class="button">
+                        </fieldset>
+                    </div> <!-- /.contact-form -->
+                </div> <!-- /.col-md-6 -->
+            </div> <!-- /.row -->
+{% endblock %}          
 
 
