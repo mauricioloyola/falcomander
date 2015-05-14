@@ -3,8 +3,226 @@
 
 {% block title %}{% endblock %} 
 
-{% block titulo_page %}Inicio{% endblock %}          
+{% block slider %}
+  <ul class="bxslider">
+    <li>
+      <img src="{{ asset(global.directorio_images ~ "slider/slide1.jpg")}}" alt="{{"Control de Plaga Aviar Integral"}}">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-right">
+            <div class="slider-caption">
+              <h2>{{"Control de Plaga Aviar"}}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <img src="{{ asset(global.directorio_images ~ "slider/slide2.jpg")}}" alt="{{"Control de Plaga Aviar"}}">
+      <div class="container caption-wrapper">
+        <div class="slider-caption">
+          <h2>{{"Control de Plaga Aviar para Industrias"}}</h2>
+        </div>
+      </div>
+    </li>            
+  </ul> <!-- /.bxslider -->       
+{% endblock %}
 
-{% block descrip_opcional %}{% endblock %}
+{% block empresa %}   
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1 class="section-title">{{"Empresa"}}</h1>
+    </div> <!-- /.col-md-12 -->
+  </div> <!-- /.row -->            
+  <div class="row">
+    <div class="col-md-2 col-sm-3">
+      <div class="item-small">
+      	<img src="{{ asset(global.directorio_images ~ "promotion/promotion1.jpg")}}" alt="Gavilán acanelado (Parabuteo unicinctus)">                  
+       	<a href="http://es.wikipedia.org/wiki/Parabuteo_unicinctus" target="_blank"><h4>{{"Gavilán acanelado (Parabuteo unicinctus)"}}</h4></a>
+      </div> <!-- /.item-small -->    
+       <br>
+      <div class="item-small">        
+        <img src="{{ asset(global.directorio_images ~ "promotion/promotion7.jpg")}}" alt="Enfermedades transmitidas por los excrementos de las palomas">   
+        <a href="#palomas"><h4>{{"Las palomas pueden causar más de 40 enfermedades"}}.</h4></a>
+      </div> <!-- /.item-small -->  
+    </div> <!-- /.col-md-2 -->
+    <div class="col-md-8 col-sm-6">
+      <div class="item-large">
+          <img src="{{ asset(global.directorio_images ~ "promotion/promotion2.jpg")}}" alt="Product 2">            
+          <div class="item-large-content">
+            <div class="item-header">
+              <h2 class="pull-left">{{"FALCOMANDER CONTROL S.R.L"}}</h2>
+              <div class="clearfix"></div>
+            </div> <!-- /.item-header -->
+            
+            <p>
+              {{"Es una empresa dedicada al control de plagas, específicamente aves, utilizando métodos no tradicionales y ecológicos, tales como la cetrería y la etología, las cuales no ocasionan ningún tipo de daño al medio ambiente y a la plaga problema"}}.
+            </p>
+            <p>
+              {{"El principio de FALCOMANDER CONTROL no es matar y/o cazar rutinariamente, sino por el contrario, es el de educar a las poblaciones de aves que causan el problema sobre las áreas en donde no deben de estar presentes. Simplemente condicionamos a la plaga problema aprovechando algunos mecanismos de la psicología animal y de esta forma no produciendo daño o impacto ambiental"}}.
+            </p>
+            <p>
+              {{"FALCOMANDER CONTROL brinda Servicios de Control de Plaga Aviar integral en almacenes, molinos, fundos, oficinas, residencias, oficinas, industrias, locales comerciales en el campo o la ciudad, zonas urbanas o rurales"}}.
+            </p>
+            <p>
+              {{"Utilizamos Gavilanes acanelado (Parabuteo unicinctus) y Halcón aplomado (Falco femoralis) debidamente registrados de acuerdo a las leyes y normas del Perú"}}.
+            </p>
+            <p>
+            	{{"¿Sabías que las palomas pueden causar más de 40 enfermedades?, entérate"}}
+            	<a href="#palomas">{{"aquí"}}</a>
+            </p>
+            <p>
+            	<b>{{"Cuida tu salud, la de tus trabajadores y clientes evitando enfermedades transmitidas por las palomas"}}.</b>
+            </p>
+            <p>
+              {{"Solicite la visita de nuestro personal especializado para mayor información"}}.
+            </p>
+            <p>            	
+              	<b>{{"Email:"}}</b> <a href="mailto:info@falcomandercontrol.com">{{"info@falcomandercontrol.com"}}</a><br>
+            	<b>{{"Teléfono:"}}</b> {{"675-5090 / 977524410"}}
+            </p>
+          </div> <!-- /.item-large-content -->
+      </div> <!-- /.item-large -->
+    </div> <!-- /.col-md-8 -->
+    <div class="col-md-2 col-sm-3">
+      <div class="item-small">        
+        <img src="{{ asset(global.directorio_images ~ "promotion/promotion3.jpg")}}" alt="Halcón Aplomado (Falco femoralis)">  
+        <a href="http://es.wikipedia.org/wiki/Falco_femoralis" target="_blank"><h4>{{"Halcón Aplomado (Falco femoralis)"}}</h4></a>         
+      </div> <!-- /.item-small -->
+    </div> <!-- /.col-md-2 -->
+  </div> <!-- /.row --> 
+
+     
+  
+{% endblock %} 
+
+{% block palomas %}
+	<div class="row">
+    	<div class="col-md-12 text-center">
+      	<h1 class="section-title">{{"Las palomas y sus peligrosas enfermedades"}}</h1>
+    	</div> <!-- /.col-md-12 -->
+  	</div> <!-- /.row -->  
+  	<div class="row">
+    <div class="col-md-2 col-sm-3">
+      <div class="item-small">
+        <img src="{{ asset(global.directorio_images ~ "promotion/promotion4.jpg")}}" alt="Video: Dr .TV Perú - Palomas Peligrosas">      
+        <a href="https://youtu.be/PuWE067st3c" target="_blank"><h4>{{"Video: Dr .TV Perú - Palomas Peligrosas"}}</h4></a>
+      </div> <!-- /.item-small -->
+      <br>
+      <div class="item-small">
+        <img src="{{ asset(global.directorio_images ~ "promotion/promotion4.jpg")}}" alt="Doctor TV: ¿Qué vive bajo tu techo?">      
+        <a href="http://www.americatv.com.pe/doctor-tv/clips/doctor-tv-que-vive-bajo-tu-techo-noticia-1595" target="_blank"><h4>{{"Video: Doctor TV: ¿Qué vive bajo tu techo?"}}</h4></a>
+      </div> <!-- /.item-small -->
+    </div> <!-- /.col-md-2 -->
+    <div class="col-md-8 col-sm-6">
+      <div class="item-large">   
+      	 <img src="{{ asset(global.directorio_images ~ "promotion/promotion5.jpg")}}" alt="Product 2">                  
+          <div class="item-large-content">
+            <div class="item-header">
+              <h2 class="pull-left">{{"Las palomas pueden causar más de 40 enfermedades"}}</h2>
+              <div class="clearfix"></div>
+            </div> <!-- /.item-header -->
+            
+            <p>
+              {{"Las palomas pueden trasmitir múltiples"}} <b>{{"enfermedades infecciosas"}}</b> {{", incluso con consecuencias fatales por daño pulmonar, "}}<a href="http://es.wikipedia.org/wiki/Neumon%C3%ADa" target="_blank"><b>{{"neumonías"}}</b></a>, <a href="http://es.wikipedia.org/wiki/Hepatitis" target="_blank"><b>{{"hepatitis"}}</b></a> {{"o afección cerebral, informó el Ministerio de Salud (Minsa)"}}.
+            </p>
+            <p>
+            	"{{"Sus plumas, sus excrementos, entre otros agentes de estas aves, trasmiten hongos, bacterias y parásitos"}}"{{", dijo Ana María Navarro, coordinadora nacional de la Estrategia de Zoonosis del Minsa"}}.
+            </p>
+            <p>
+            	{{"Los"}} <b>{{" más afectados"}}</b>{{", según la especialista, son los niños, adultos mayores, personas infectadas con VIH, enfermos de cáncer y"}} <a href="http://es.wikipedia.org/wiki/Diabetes_mellitus" target="_blank"><b>{{"diabetes"}}</b></a> {{"debido a que sus defensas están disminuidas"}}.
+            </p>
+            <p>
+            	{{"Explicó que el"}} <b>{{"mayor peligro"}}</b> {{"lo constituye el contacto directo a los excrementos y la inhalación de los mismos en forma de polvo microscópico"}}
+            </p>
+            <p>
+            	{{"La especialista indicó que se tiene reportes de"}} <b>{{"más de 40 enfermedades"}}</b> {{"transmisibles entre las que se encuentran: La salmonelosis, colibacilosis, criptococosis e histoplasmosis. Además, las palomas son portadoras de ectoparásitos como piojos y garrapatas"}}.
+            </p>            
+            <p>
+            	<b>{{"Recomendaciones"}}:</b>
+            	<ul>
+					<li>{{"Controlar la proliferación de estas aves disminuyendo la disponibilidad del alimento"}}.</li>
+					<li>{{"La limpieza de zonas con excremento de palomas, deben hacerse con guantes desechables y ropa adecuada"}}.</li>
+					<li>{{"Las autoridades locales deben emitir ordenanzas y fortalecer la educación sanitaria para evitar la proliferación de palomas"}}.</li>
+				</ul>
+            </p>
+            <p>
+            	<b>{{"Fuente"}}:</b> <a href="http://www.rpp.com.pe/2014-01-09-palomas-pueden-causar-mas-de-40-enfermedades-noticia_660640.html" target="_blank">{{"Publicación del día Jueves, 09 de Enero 2014  |  12:41 pm en la web de RPP Noticias"}}.</a>
+            </p> 
+            <p>
+            	<b>{{"Video:"}}</b>	{{"Dr .TV Perú (08-04-2014) - B1 - Tema del día:Palomas Peligrosas "}}.<br>
+            	<iframe width="420" height="315" src="https://www.youtube.com/embed/PuWE067st3c" frameborder="0" allowfullscreen></iframe>
+            </p>           
+            <p>
+            	<b>{{"Video:"}}</b>	{{"RED SALUD UC. Palomas y sus peligrosas enfermedades"}}.<br>
+            	<iframe width="420" height="315" src="https://www.youtube.com/embed/hHPvyHRrMjo" frameborder="0" allowfullscreen></iframe>
+            </p>
+            <p>
+            	{{"En"}} <b>{{"FALCOMANDER CONTROL"}}</b> {{"tenemos la experiencia y las mejores técnicas para el control de plagas aviar (palomas) en industrias, almacenes, oficinas, locales comerciales, hospitales, universidades, aeropuertos, residencias, edificios, zonas rurales, etc"}}.
+            </p>
+            <p>
+            	<b>{{"Cuida tu salud, la de tus trabajadores y clientes evitando enfermedades transmitidas por las palomas"}}.</b>
+            </p>
+            <p>
+            	<b>{{"¿Tienes problemas de plaga aviar (palomas) en tu empresa u hogar?"}}</b>, {{"comunícate con nosotros que un asesor atenderá tu problema"}}.<br>
+            	<b>{{"Email:"}}</b> <a href="mailto:info@falcomandercontrol.com">{{"info@falcomandercontrol.com"}}</a><br>
+            	<b>{{"Teléfono:"}}</b> {{"675-5090 / 977524410"}}
+            </p>
+
+          </div> <!-- /.item-large-content -->
+      </div> <!-- /.item-large -->
+    </div> <!-- /.col-md-8 -->
+    <div class="col-md-2 col-sm-3">
+      <div class="item-small">        
+        <img src="{{ asset(global.directorio_images ~ "promotion/promotion6.jpg")}}" alt="Heces de palomas provocaron muerte de un anciano en La Perla">   
+        <a href="http://elcomercio.pe/lima/sucesos/heces-palomas-provocaron-muerte-anciano-perla-noticia-1259303" target="_blank"><h4>{{"Noticia: Heces de palomas provocaron muerte de un anciano en La Perla"}}.</h4></a>
+      </div> <!-- /.item-small -->
+      <br>
+      <div class="item-small">        
+        <img src="{{ asset(global.directorio_images ~ "promotion/promotion7.jpg")}}" alt="Enfermedades transmitidas por los excrementos de las palomas">   
+        <a href="http://medicinaintercultural.org/contenido/2012-03-13-enfermedades-transmitidas-por-los-excrementos-de-las-palomas" target="_blank"><h4>{{"Enfermedades transmitidas por los excrementos de las palomas"}}.</h4></a>
+      </div> <!-- /.item-small -->
+    </div> <!-- /.col-md-2 -->
+  </div> <!-- /.row -->        
+
+{% endblock %}        
+
+{% block servicios %}
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1 class="section-title">{{"Servicios"}}</h1>
+    </div> <!-- /.col-md-12 -->
+  </div> <!-- /.row -->  
+  <div class="row">
+    <div class="col-md-3 col-sm-6">
+      <div class="service-item">
+        <span class="service-icon third"></span>
+        <h3>{{"Control de Plaga Aviar para Industrias, Almacenes, Oficinas, Supermercados"}}</h3>
+        <p>{{"Brindamos el Servicio Integral de Control de Plaga Aviar para Industrias, Almacenes, Oficinas y Supermercados que tengan problemas con habita de palomas dentro y fuera de sus instalaciones. Las Palomas pueden trasmitir hasta 40 enfermedades al ser humano y animales domésticos"}}.</p>
+      </div> <!-- /.service-item -->
+    </div> <!-- /.col-md-3 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="service-item">
+        <span class="service-icon third"></span>
+        <h3>{{"Control de Plaga Aviar para Centros Comerciales, Hoteles, Hospitales"}}</h3>
+        <p>{{"Brindamos el Servicio Integral de Control de Plaga Aviar para Centros Comerciales, Hoteles y Hospitales. Las Palomas pueden trasmitir hasta 40 enfermedades al ser humano y animales domésticos. Cuide su salud, la de sus trabajadores, pacientes y clientes"}}.</p>
+      </div> <!-- /.service-item -->
+    </div> <!-- /.col-md-3 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="service-item">
+        <span class="service-icon third"></span>
+        <h3>{{"Control de Plaga Aviar para Universidades, Colegios, Edificios, Cocheras"}}</h3>
+        <p>{{"Brindamos el Servicio Integral de Control de Plaga Aviar para Universidades, Colegios, Edificios y Cocheras para cuidar la salud de estudiantes y de su familia, evite más de 40 enfermedades que trasmiten las palomas"}}.</p>
+      </div> <!-- /.service-item -->
+    </div> <!-- /.col-md-3 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="service-item">
+        <span class="service-icon third"></span>
+        <h3>{{"Control de Plaga Aviar para Aeropuertos, Terrapuertos, Fundos, Campos"}}</h3>
+        <p>{{"Brindamos el Servicio Integral de Control de Plaga Aviar para Aeropuertos, Terrapuertos, Fundos, Campos de cultivos. Evite que las palomas causen daños en los servicios y producción de su empresa. Cuide su salud, la de sus trabajadores y clientes"}}.</p>
+      </div> <!-- /.service-item -->
+    </div> <!-- /.col-md-3 -->  
+  </div> <!-- /.row -->
+{% endblock %}
 
 

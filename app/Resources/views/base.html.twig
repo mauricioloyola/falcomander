@@ -17,60 +17,7 @@
       <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
       <![endif]-->
 
-      <div id="front">
-        <div class="site-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-6">
-                        <div id="templatemo_logo">
-                            <h1><a href="#" title="HTML5 Template">{{"Control de Plaga Aviar"}}</a></h1>
-                        </div> <!-- /.logo -->
-                    </div> <!-- /.col-md-4 -->
-                    <div class="col-md-8 col-sm-6 col-xs-6">
-                        <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
-                        <div class="main-menu">
-                            <ul>
-                                <li><a href="#front">{{"Inicio"}}</a></li>
-                                <li><a href="#empresa">{{"Empresa"}}</a></li>
-                                <li><a href="#servicios">{{"Servicios"}}</a></li>
-                                <li><a href="#contact">{{"Contacto"}}</a></li>
-                            </ul>
-                        </div> <!-- /.main-menu -->
-                    </div> <!-- /.col-md-8 -->
-                </div> <!-- /.row -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="responsive">
-                            <div class="main-menu">
-                                <ul>
-                                    <li><a href="#front">{{"Inicio"}}</a></li>
-                                    <li><a href="#empresa">{{"Empresa"}}</a></li>
-                                    <li><a href="#products">{{"Servicios"}}</a></li>
-                                    <li><a href="#contact">{{"Contacto"}}</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- /.container -->
-        </div> <!-- /.site-header -->
-      </div> <!-- /#front -->
-
-      <div class="site-slider">
-        {% block slider %}{% endblock %}        
-      </div> <!-- /.site-slider -->  
-
-      <div id="empresa" class="content-section">
-        <div class="container">
-            {% block empresa %}{% endblock %}        
-        </div> <!-- /.container -->
-      </div> <!-- /#product-promotion -->      
-
-      <div id="servicios" class="content-section">
-        <div class="container">
-            {% block servicios %}{% endblock %}        
-        </div> <!-- /.container -->
-      </div> <!-- /#product-promotion -->  
+      {% block body %}{% endblock %}        
 
       {% block javascripts %}{% endblock %}
     </body>
