@@ -68,8 +68,8 @@
               {{"Utilizamos Gavilanes acanelado (Parabuteo unicinctus) y Halcón aplomado (Falco femoralis) debidamente registrados de acuerdo a las leyes y normas del Perú"}}.
             </p>
             <p>
-            	{{"¿Sabías que las palomas pueden causar más de 40 enfermedades?, entérate"}}
-            	<a href="#palomas">{{"aquí"}}</a>
+            	<b>{{"¿Sabías que las palomas pueden causar más de 40 enfermedades?, entérate"}}
+            	<a href="#palomas">{{"aquí"}}</a></b>
             </p>
             <p>
             	<b>{{"Cuida tu salud, la de tus trabajadores y clientes evitando enfermedades transmitidas por las palomas"}}.</b>
@@ -91,9 +91,6 @@
       </div> <!-- /.item-small -->
     </div> <!-- /.col-md-2 -->
   </div> <!-- /.row --> 
-
-     
-  
 {% endblock %} 
 
 {% block palomas %}
@@ -104,6 +101,11 @@
   	</div> <!-- /.row -->  
   	<div class="row">
     <div class="col-md-2 col-sm-3">
+      <div class="item-small">
+        <img src="{{ asset(global.directorio_images ~ "promotion/logo_panorama.jpg")}}" alt="Video: Plaga de Palomas en Lima, preligro para su salud">      
+        <a href="https://www.youtube.com/watch?v=qJqACRw0eHM" target="_blank"><h4>{{"Video: Plaga de Palomas en Lima, preligro para su salud"}}</h4></a>
+      </div> <!-- /.item-small -->
+      <br>
       <div class="item-small">
         <img src="{{ asset(global.directorio_images ~ "promotion/promotion4.jpg")}}" alt="Video: Dr .TV Perú - Palomas Peligrosas">      
         <a href="https://youtu.be/PuWE067st3c" target="_blank"><h4>{{"Video: Dr .TV Perú - Palomas Peligrosas"}}</h4></a>
@@ -152,11 +154,15 @@
             <p>
             	<b>{{"Video:"}}</b>	{{"Dr .TV Perú (08-04-2014) - B1 - Tema del día:Palomas Peligrosas "}}.<br>
             	<iframe width="420" height="315" src="https://www.youtube.com/embed/PuWE067st3c" frameborder="0" allowfullscreen></iframe>
-            </p>           
+            </p>  
+            <p>
+              <b>{{"Video:"}}</b> {{"Programa Panorama: Plaga de Palomas en Lima , tenga cuidado con su salud"}}.<br>              
+              <iframe width="420" height="315" src="https://www.youtube.com/embed/qJqACRw0eHM" frameborder="0" allowfullscreen></iframe>
+            </p>         
             <p>
             	<b>{{"Video:"}}</b>	{{"RED SALUD UC. Palomas y sus peligrosas enfermedades"}}.<br>
             	<iframe width="420" height="315" src="https://www.youtube.com/embed/hHPvyHRrMjo" frameborder="0" allowfullscreen></iframe>
-            </p>
+            </p>            
             <p>
             	{{"En"}} <b>{{"FALCOMANDER CONTROL"}}</b> {{"tenemos la experiencia y las mejores técnicas para el control de plagas aviar (palomas) en industrias, almacenes, oficinas, locales comerciales, hospitales, universidades, aeropuertos, residencias, edificios, zonas rurales, etc"}}.
             </p>
@@ -173,6 +179,11 @@
       </div> <!-- /.item-large -->
     </div> <!-- /.col-md-8 -->
     <div class="col-md-2 col-sm-3">
+      <div class="item-small">        
+        <img src="{{ asset(global.directorio_images ~ "promotion/picadurasninos.jpg")}}" alt="Palomas infectan a niños en los colegios">   
+        <a href="https://www.youtube.com/watch?v=VdXrZ5wgHME" target="_blank"><h4>{{"Video: Palomas infectan a niños en los colegios"}}.</h4></a>
+      </div> <!-- /.item-small -->
+      <br>
       <div class="item-small">        
         <img src="{{ asset(global.directorio_images ~ "promotion/promotion6.jpg")}}" alt="Heces de palomas provocaron muerte de un anciano en La Perla">   
         <a href="http://elcomercio.pe/lima/sucesos/heces-palomas-provocaron-muerte-anciano-perla-noticia-1259303" target="_blank"><h4>{{"Noticia: Heces de palomas provocaron muerte de un anciano en La Perla"}}.</h4></a>
